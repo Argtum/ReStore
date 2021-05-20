@@ -1,5 +1,5 @@
-import withSwapiService from "./with-bookstore-service";
+import withBookstoreService from "./with-bookstore-service";
 
 export {
-  withSwapiService
+  withBookstoreService
 };
