@@ -45,7 +45,7 @@ const mapStateToProps = ({books, loading, error}) => {
 
 const mapDispatchToProps = (dispatch, {bookstoreService}) => {
   return {
-    fetchBooks: fetchBooks(dispatch, bookstoreService)
+    fetchBooks: fetchBooks(bookstoreService, dispatch)
   }
 };
 
