@@ -2,22 +2,11 @@ import React, {Component} from "react";
 
 import "./book-list.css";
 import {BookListItem} from "../book-list-item";
+import {connect} from "react-redux";
 
-export default class BookList extends Component {
+class BookList extends Component {
   render() {
-    //const {books} = this.props;
-    const books = [
-      {
-        id: 1,
-        title: `Production-Ready Microservices`,
-        author: `Susan J. Fowler`
-      },
-      {
-        id: 2,
-        title: `Release It!`,
-        author: `Michael T. Nygard`
-      }
-    ]
+    const {books} = this.props;
 
     return (
       <ul>
@@ -32,3 +21,9 @@ export default class BookList extends Component {
     );
   }
 }
+
+const mapStateToProps = ({books}) => {
+  return {books};
+};
+
+export default connect(mapStateToProps)(BookList);
